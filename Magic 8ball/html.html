@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+     <link rel="stylesheet" type="text/css" href="css.css">
+    <title>Magic 8Ball</title>
+</head>
+
+<body background="magic8ball.jfif">
+    <h1> Magic 8 ball </h1>
+    <input type="text" name="question" value="">
+    <button type="button" onclick="onClick()">Shake!</button>
+    <select id="moods">
+      <option value="happy">Happy</option>
+      <option value="sad">Sad</option>
+      <option value="mean">Mean</option>
+      <option value="meme">Meme</option>
+    </select>
+    <p id="result"></p>
+</body>
+<script type="text/javascript">
+
+
+let happyCore = {
+  answers: ['Yes', 'Why not?', 'You got this', 'I\'m sorry \, no', 'I don\'t think so']
+}
+
+let sadCore = {
+  answers:['sure', 'i guess', 'no', '\:\(', 'i don\'t know',  '...', 'hopefully']
+}
+
+let meanCore = {
+  answers:['You idot\, of course not\!', 'Get out of here you moron', 'Give up', 'You suck']
+}
+
+let memeCore = {
+  answers:['That\'s gonna be a yikes for me chief', 'Hmm yes\, the floor here is made out of floor', 'I see no god in here\, OTHER THAN ME\!', 'ight\, imma head out']
+}
+
+
+let core = happyCore
+
+function onClick(){
+  if (document.getElementById('moods').value == 'happy'){
+
+
+
+    core = happyCore
+  }
+  if (document.getElementById('moods').value == 'sad'){
+
+
+
+    core = sadCore
+  }
+  if (document.getElementById('moods').value == 'mean'){
+
+
+
+    core = meanCore
+  }
+  if (document.getElementById('moods').value == 'meme'){
+
+
+
+    core = memeCore
+  }
+  document.getElementById("result").innerHTML = core.answers[Math.floor(Math.random() * core.answers.length)];
+}
+</script>
+</html>
