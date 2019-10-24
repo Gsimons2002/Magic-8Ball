@@ -8,34 +8,43 @@
 </head>
 
 <body background="magic8ball.jfif">
-    <h1> Magic 8 ball </h1>
+    <center>
+      <h1><i> Magic 8 Ball </i></h1>
+    <div>
+      <p>
+        Ask a question
+      </p>
+    </div>
+    <div>
     <input type="text" name="question" value="">
+    <div>
     <button type="button" onclick="onClick()">Shake!</button>
-    <select id="moods">
-      <option value="happy">Happy</option>
-      <option value="sad">Sad</option>
-      <option value="mean">Mean</option>
-      <option value="meme">Meme</option>
+    <select id="moods" class="">
+      <option value="happy" class="option1">Happy</option>
+      <option value="sad" class="option2">Sad</option>
+      <option value="mean" class="option3">Mean</option>
+      <option value="meme" class="option4">Meme</option>
     </select>
     <p id="result"></p>
+  </center>
 </body>
 <script type="text/javascript">
 
 
 let happyCore = {
-  answers: ['Yes', 'Why not?', 'You got this', 'I\'m sorry \, no', 'I don\'t think so']
+  answers: ['Yes', 'Why not?', 'You got this', 'I\'m sorry \, no', 'I don\'t think so', 'You can do this\!', 'Winner Winner Chiken Dinner\!']
 }
 
 let sadCore = {
-  answers:['sure', 'i guess', 'no', '\:\(', 'i don\'t know',  '...', 'hopefully']
+  answers:['sure', 'i guess', 'no', '\:\(', 'i don\'t know',  '...', 'hopefully', 'i\'m sorry\, i don\'t know','i wish i could tell you', 'i think so', 'maybe']
 }
 
 let meanCore = {
-  answers:['You idot\, of course not\!', 'Get out of here you moron', 'Give up', 'You suck']
+  answers:['You idot\, of course not\!', 'Get out of here you moron', 'Give up', 'You suck', 'ow my camera, I can\'t handle the ugly', 'are you really that desperate\?', 'you to poor to buy a real one\?']
 }
 
 let memeCore = {
-  answers:['That\'s gonna be a yikes for me chief', 'Hmm yes\, the floor here is made out of floor', 'I see no god in here\, OTHER THAN ME\!', 'ight\, imma head out']
+  answers:['That\'s gonna be a yikes for me chief', 'Hmm yes\, the floor here is made out of floor', 'I see no god in here\, OTHER THAN ME\!', 'ight\, imma head out', 'Wack', 'yeet', 'we like Minecraft \, we like Minecraft', 'IT\'S OVER 9000\!', 'you\'ve been gnomed']
 }
 
 
@@ -68,5 +77,6 @@ function onClick(){
   }
   document.getElementById("result").innerHTML = core.answers[Math.floor(Math.random() * core.answers.length)];
 }
+
 </script>
 </html>
